@@ -1,0 +1,11 @@
+{
+  "name": "backgroundparallax",
+  "version": "1.0.0",
+  "description": "Background Parallax creation",
+  "main": "VSCode-friendlyGULP.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
