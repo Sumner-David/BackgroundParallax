@@ -14,22 +14,22 @@
 
 
     function scssCompile() {
-        return gulp.src('src/scss/main.scss', {allowempty : true})
+        return gulp.src('./scss/main.scss', {allowempty : true})
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('src/css'))
+        .pipe(gulp.dest('./css'))
     };
 
     function autoprefix() {
-        return gulp.src('src/css/main.css')
+        return gulp.src('./css/main.css')
         .pipe(autoprefixer())
-        .pipe(gulp.dest('src/css'))
+        .pipe(gulp.dest('./css'))
     }
     
 
 
     function watchFiles() {
         console.log("\r\n Watching Scss files \r\n");
-        gulp.watch('src/**/*.scss', gulp.series(scssCompile, autoprefix));
+        gulp.watch('./scss/*.scss', gulp.series(scssCompile, autoprefix));
     }
 
 exports.styles = gulp.series(scssCompile,autoprefix);
